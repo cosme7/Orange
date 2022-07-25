@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --spacer-one: 2rem 6rem;
+    --spacer-two: 1rem 3rem 1rem 6rem;
+    --spacer-three: 2rem 1rem;
+    /*  */
+    --ff-one: 'Roboto', sans-serif;
+    /*  */
+    --wg-one: 900;
+    --wg-two: 700;
+    --wg-three: 500;
+    /*  */
+    --bg-one: #F8765E;
+    --bg-two: #ffffff;
+    --bg-three: #9BDBE7;
+    /*  */
+    --clr-one: #ffffff;
+    --clr-two: #031d5c;
+    --clr-three: #5B6C94;
+    --clr-four: #CDCDCD;
+}
+
+.h-container{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-bottom: 6vw;
+    background-color: var(--bg-one);
+}
+
+.h-top-wrapper{
+    width: 100%;
+    margin-bottom: calc(1rem + 4vw);
+    padding: var(--spacer-one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-top-wrapper h1{
+    font-size: calc(1rem + .5vw);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-one);
+    color: var(--clr-one);
+    text-transform: uppercase;
+}
+
+.h-top-wrapper > nav{
+    margin-right: 3rem;
+}
+
+.h-ul{
+    display: flex;
+    gap: 3rem;
+}
+
+.h-ul li > a{
+    font-size: clamp(.8rem, 2vw, 1.2rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-one);
+    color: var(--clr-one);
+}
+
+.h-mid-wrapper{
+    width: 100%;
+    padding: var(--spacer-two);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-txt{
+    width: 50%;
+}
+
+.h-txt h2{
+    width: min(45vw, 25ch);
+    font-size: clamp(1.9rem, 3.5vw, 4.5rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-one);
+    color: var(--clr-one);
+}
+
+.h-txt p{
+    width: min(62ch, 100%);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-three);
+    line-height: 35px;
+    margin: 2rem 0;
+    color: var(--clr-one);
+}
+
+.h-input{
+    width: 24vw;
+    height: 50px;
+    border-radius: 20px;
+    margin-right: 1rem;
+    border: none;
+    outline: none;
+}
+
+.h-input::placeholder{
+    font-size: clamp(1.2rem, 2vw, 1.2rem);
+    padding-left: 1vw;
+}
+
+.h-btn{
+    font-family: var(--ff-one);
+    font-size: clamp(1.2rem, 2vw, 1.2rem);
+    padding: .75em .8em;
+    border-radius: 20px;
+    background-color: var(--bg-three);
+    color: var(--clr-one);
+    border: none;
+    cursor: pointer;
+}
+
+.h-orange-img{
+    width: 50%;
+}
