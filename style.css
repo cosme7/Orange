@@ -286,7 +286,7 @@
 /** MAIN 3º CONTAINER */
 .main--mid{
     max-width: var(--wid-one);
-    margin: 0 auto 6rem;
+    margin: 0 auto 7rem;
 }
 
 .mid--wrapper{
@@ -392,7 +392,7 @@
 /** MAIN 4º CONTAINER */
 .main--low{
     max-width: var(--wg-one);
-    margin: 0 auto 6rem;
+    margin: 0 auto 7rem;
     background-color: var(--bg-two);
     display: flex;
     flex-direction: column;
@@ -445,3 +445,38 @@
     border: none;
     cursor: pointer;
 }
+
+/** FOOTER */
+.f--container{
+    max-width: var(--wg-one);
+    margin: 0 auto;
+    padding: 3rem 0 2rem;
+    background-color: var(--bg-one);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.f__copyright{
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-one);
+    color: var(--clr-one);
+}
+
+.f__ul{
+    display: flex;
+}
+
+.f__ul li > a{
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-one);
+    color: var(--clr-one);
+}
+
+.f__ul li > a > span{
+    margin: 0 2rem;
+}
+
