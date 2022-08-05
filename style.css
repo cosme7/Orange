@@ -44,7 +44,6 @@
 
 .h--top{
     width: var(--wid-two);
-    margin-bottom: calc(1rem + 4vw);
     margin: 0 auto 10vw;
     padding-top: 2rem;
     display: flex;
@@ -121,7 +120,10 @@
 
 .h__input::placeholder{
     font-size: clamp(1.2rem, 2vw, 1.2rem);
+    font-family: var(--ff-one);
+    font-weight: var(--wg-two);
     padding-left: 1vw;
+    color: var(--clr-four);
 }
 
 .h__btn{
@@ -153,7 +155,7 @@
     align-items: center;
     gap: 2rem;
     position: relative;
-    bottom: 8rem;
+    bottom: 7rem;
 }
 
 .card--box > *{
@@ -431,7 +433,9 @@
 .low__input::placeholder{
     font-size: clamp(1.2rem, 2vw, 1.2rem);
     font-family: var(--ff-one);
-    padding-left: 1.5rem;
+    font-weight: var(--wg-two);
+    padding-left: 1.5rem;    
+    color: var(--clr-four);
 }
 
 .low__btn{
@@ -478,5 +482,204 @@
 
 .f__ul li > a > span{
     margin: 0 2rem;
+}
+
+@media (max-width: 800px){
+    :root{
+        --wid-third: 100%;
+    }
+
+    /** HEADER RESPONSIVE */
+    .h--container{
+        padding-bottom: 20vw;
+    }
+
+    .h--top{
+        width: var(--wid-third);
+        margin: 0 auto 3rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }    
+
+    .h__nav{
+        margin-right: 0;
+    }
+
+    .h--mid{
+        width: var(--wid-third);
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .h__img{
+        width: var(--wid-two);
+        order: -1;
+    }
+
+    .h__txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h__txt__tittle, 
+    .h__txt__body{
+        text-align: center;
+    }
+    
+    .h__txt__tittle{
+        width: 100%;
+    }
+
+    .h__txt__body{
+        width: 100%;
+    }
+
+    .h--form{
+        width: var(--wid-third);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .h__input{
+        width: var(--wid-two);
+        margin-right: 0;
+    }
+
+    /** MAIN 1º CONTAINER RESPONSIVE */
+    .card--box{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        bottom: 10vw;
+    }
+
+    .card--wrapper{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .card__img{
+        width: 80%;
+        margin: 0;
+    }
+
+    .card__title::after{
+        width: 70px;
+    }
+
+    /** MAIN 2º CONTAINER RESPONSIVE */
+    .main--top{
+        margin: 0 auto 25vw;
+    }
+
+    .top--wrapper{
+        width: var(--wid-third);
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .top--fig{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+    }
+
+    .taste__img{
+        display: none;
+    }
+
+    .taste__mobile,
+    .taste__cta{
+        width: 40%;
+        display: initial;
+    }
+
+    .taste__cta{
+        width: 60%;
+        position: absolute;
+        top: 10vw;
+        z-index: -1;
+    }
+
+    .taste--txt{
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .taste__title,
+    .taste__subtitle,
+    .taste__body{
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    /** MAIN 3º CONTAINER RESPONSIVE */
+    .main--mid{
+        position: relative;
+    }
+
+    .mid--wrapper{
+        width: 85%;
+    }
+
+    .mid--quote{
+        background: transparent;
+        position: absolute;
+        top: -20vw;
+        left: 7vw;
+        z-index: 1;
+    }
+
+    .quote__img{
+        width: 55%;
+    }
+
+    .quote__subtitle{
+        line-height: 45px;
+        margin: 4rem 0 0 1rem;
+    }
+
+    .mid--orange{
+        margin: 0;
+    }
+
+    .mid--orange--wraper{
+        grid-auto-columns: 60%;
+        column-gap: 0;
+        top: 0;
+        right: 10vw;
+    }
+
+    .orange--blue{
+        width: 310px;
+        height: 400px;
+        padding: 3rem 2rem;
+    }
+
+    .wrapper__quote{
+        width: 30%;
+        margin-bottom: 2rem;
+    }
+
+    /** MAIN 4º CONTAINER RESPONSIVE */
+    .low__title{
+        width: 25ch;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .main--input{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
 }
 
