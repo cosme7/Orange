@@ -9,10 +9,6 @@
 }
 
 :root{
-    --spacer-one: 1.5% 5.5%;
-    --spacer-two: 1% 1.5% 1% 5%;
-    --spacer-three: 2rem 1rem;
-    /*  */
     --ff-one: 'Roboto', sans-serif;
     /*  */
     --wid-one: 1920px;
@@ -294,13 +290,16 @@
 .mid--wrapper{
     width: 95%;
     margin: 0 0 0 auto;
+    background-color: var(--bg-two);
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .mid--quote{
-    background-color: var(--bg-two);
+    background-color: transparent;
     position: relative;
-    z-index: 0;
+    z-index: 1;
     flex: 1;
 }
 
@@ -324,22 +323,22 @@
     height: clamp(660px, 950px, 45vw);
     border-radius: 20px 0 0 20px;
     background-color: var(--bg-one);
-    display: flex;
-    align-items: center;
-    flex: 1.5;
+    flex: 2;
+    overflow: hidden;
 }
 
-.mid--orange--wraper{
-    width: 100%;
+.carrosel--wraper{
+    width: auto;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 45%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    column-gap: 3rem;
-    position: relative;
-    top: 2rem;
-    right: 13vw;
+    column-gap: 4rem;
+    position: absolute;
+    z-index: 1;
+    top: 10vw;
+    left: 19vw;
 }
 
 .orange--blue{
@@ -422,7 +421,7 @@
 }
 
 .low__input{
-    width: clamp(335px, 368px, 400px);
+    width: clamp(300px, 10vw, 400px);
     height: 60px;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
     border-radius: 20px;
@@ -530,11 +529,11 @@
     }
     
     .h__txt__tittle{
-        width: 100%;
+        width: 80%;
     }
 
     .h__txt__body{
-        width: 100%;
+        width: 80%;
     }
 
     .h--form{
@@ -551,11 +550,16 @@
     }
 
     /** MAIN 1º CONTAINER RESPONSIVE */
+    .main--card{
+        margin: 0 auto 5rem;
+    }
+
     .card--box{
         flex-direction: column;
         align-items: center;
+        padding: 2rem 1rem;
         gap: 2rem;
-        bottom: 10vw;
+        bottom: 5rem;
     }
 
     .card--wrapper{
@@ -574,7 +578,7 @@
 
     /** MAIN 2º CONTAINER RESPONSIVE */
     .main--top{
-        margin: 0 auto 25vw;
+        margin: 0 auto 15rem;
     }
 
     .top--wrapper{
@@ -610,6 +614,7 @@
     }
 
     .taste--txt{
+        padding: 0 1rem;
         align-items: center;
         gap: 1rem;
     }
@@ -622,20 +627,14 @@
     }
 
     /** MAIN 3º CONTAINER RESPONSIVE */
-    .main--mid{
-        position: relative;
-    }
-
     .mid--wrapper{
         width: 85%;
     }
 
     .mid--quote{
-        background: transparent;
         position: absolute;
         top: -20vw;
-        left: 7vw;
-        z-index: 1;
+        left: -10vw;
     }
 
     .quote__img{
@@ -651,11 +650,11 @@
         margin: 0;
     }
 
-    .mid--orange--wraper{
-        grid-auto-columns: 60%;
-        column-gap: 0;
-        top: 0;
-        right: 10vw;
+    .carrosel--wraper{
+        width: var(--wid-third);
+        grid-auto-columns: 55%;
+        column-gap: 4rem;
+        inset: 15vw 0 0 -8vw;
     }
 
     .orange--blue{
@@ -671,7 +670,7 @@
 
     /** MAIN 4º CONTAINER RESPONSIVE */
     .low__title{
-        width: 25ch;
+        width: 17ch;
         line-height: 40px;
         text-align: center;
     }
@@ -683,3 +682,42 @@
     }
 }
 
+@media (max-width: 550px){
+    .card--box{
+        bottom: 3rem;
+    }
+
+    .mid--quote{
+        top: -30vw;
+    }
+
+    .carrosel--wraper{
+        column-gap: 8rem;
+    }
+
+    .f__ul li > a > span{
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 400px){
+    .mid--quote{
+        top: -40vw;
+    }
+
+    .carrosel--wraper{
+        column-gap: 12rem;
+        top: 20vw;
+    }
+
+    .f__ul li > a > span{
+        margin: 0 .5rem;
+    }
+}
+
+@media (max-width: 350px){
+    .mid--quote{
+        top: -47vw;
+        left: -12vw;
+    }
+}
